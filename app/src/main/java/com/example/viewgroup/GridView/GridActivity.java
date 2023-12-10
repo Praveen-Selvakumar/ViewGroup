@@ -1,6 +1,8 @@
 package com.example.viewgroup.GridView;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.GridView;
 
 import androidx.annotation.Nullable;
@@ -28,13 +30,14 @@ public class GridActivity extends AppCompatActivity {
 
 
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        gv  = (GridView) findViewById(R.id
-                .gv);
+        gv  = (GridView) findViewById(R.id.gv);
+        gv.setVisibility(View.VISIBLE);
 
         gv.setAdapter(new GridViewAdapter(GridActivity.this, getData()));
 

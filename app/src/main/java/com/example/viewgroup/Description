@@ -1,0 +1,23 @@
+
+
+Libraries :
+- Glide :-   implementation 'com.github.bumptech.glide:glide:4.16.0'
+- CircleImageView :-    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+
+
+ 1. Recycler View:-
+  - View Group
+  - Cells can be re-generated when hide from user's vision and recycled.
+  - Aquire less space when compare to List and GridView .
+
+
+   Needs :-
+   - Activity
+   - Adapter extends to RecyclerView.Adapter with ViewHolder
+   - ModelClass
+
+
+
+
+
