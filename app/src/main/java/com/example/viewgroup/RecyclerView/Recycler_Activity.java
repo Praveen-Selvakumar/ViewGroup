@@ -5,6 +5,7 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -17,23 +18,22 @@ public class Recycler_Activity extends AppCompatActivity {
 
 
     RecyclerView recyclerView;
-
-
     ArrayList<AnimalModel> arrayList;
 
-    @Override
+
+
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView   = findViewById(R.id.recyclerView);
         recyclerView.setVisibility(View.VISIBLE);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+
+        //LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false);
+        //recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setLayoutManager(new GridLayoutManager(this , 2));
         recyclerView.setAdapter(new RecyclerAdapter(this, getData()));
 
-
     }
-
 
     private  ArrayList<AnimalModel> getData(){
         arrayList = new ArrayList<>();
@@ -44,8 +44,11 @@ public class Recycler_Activity extends AppCompatActivity {
         arrayList.add(new AnimalModel(5, "https://www.abc.net.au/reslib/200907/r397464_1862320.jpg","Tasmanian Devil"));
         arrayList.add(new AnimalModel(6, "https://t4.ftcdn.net/jpg/06/04/53/75/360_F_604537502_Ukw6CaHHoJTNZtPIAwbOQctsqStXQAwr.jpg","Bear"));
         arrayList.add(new AnimalModel(7, "https://thumbs.dreamstime.com/b/angry-hyena-savannah-front-view-ai-generated-spotted-looking-roaring-to-camera-281027508.jpg","Hynaa"));
-        return  arrayList;
+
+        return arrayList;
     }
+
+
 
 
 

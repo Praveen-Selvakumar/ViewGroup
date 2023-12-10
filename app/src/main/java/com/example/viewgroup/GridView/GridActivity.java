@@ -38,7 +38,6 @@ public class GridActivity extends AppCompatActivity {
 
         gv  = (GridView) findViewById(R.id.gv);
         gv.setVisibility(View.VISIBLE);
-
         gv.setAdapter(new GridViewAdapter(GridActivity.this, getData()));
 
 

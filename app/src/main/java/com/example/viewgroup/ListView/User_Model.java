@@ -1,24 +1,15 @@
-package com.example.viewgroup.RecyclerView;
+package com.example.viewgroup.ListView;
 
-public class AnimalModel {
+public class User_Model {
 
-    int id ;
+    int id;
     String image;
     String name;
 
-    public AnimalModel(int id, String image, String name) {
+    public User_Model(int id, String image, String name) {
         this.id = id;
         this.image = image;
         this.name = name;
-    }
-
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getImage() {
@@ -27,6 +18,14 @@ public class AnimalModel {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {

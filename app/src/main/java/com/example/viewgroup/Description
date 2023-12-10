@@ -6,16 +6,23 @@ Libraries :
 
 
 
- 1. Recycler View:-
+ 1. Recycler View :-
   - View Group
   - Cells can be re-generated when hide from user's vision and recycled.
   - Aquire less space when compare to List and GridView .
+
 
 
    Needs :-
    - Activity
    - Adapter extends to RecyclerView.Adapter with ViewHolder
    - ModelClass
+
+
+
+
+
+
 
 
 
